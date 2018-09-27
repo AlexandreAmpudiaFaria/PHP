@@ -37,9 +37,9 @@
 </head>
 <body id="LoginForm">
      
-     <div class="table-responsive container col-md-9 ">
+     <div class="table-responsive container col-md-offset-3 ">
 	 <br>
-	 <h1 class="text-black container col-md-7 titulo">Lista de Produtos</h1>
+	 <h1 class="text-black container col-md-offset-3 titulo">Lista de Produtos</h1>
 	 <br>
 	 
 	 <input type="button" id="botaoAdmin" name="botaoAdmin" class="btn btn-dark"
