@@ -33,22 +33,40 @@
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="listarProdutos.css">
+    <link rel="stylesheet" type="text/css" href="home.css">
 </head>
-<body id="LoginForm">
+<body class="corpo">
+
+	<!-- As a link -->
+    <nav class="navbar navbar-light bg-primary teste">
+       <a class="navbar-brand" href="home.html">Home <i class="fas fa-home"></i></a>
+     </nav>
+
+    <!-- As a link -->
+    <nav class="navbar navbar-light bg-primary">
+       <a class="navbar-brand" href="listarProdutos.php">Produtos <i class="fas fa-archive"></i></a>
+    </nav>
+    <!-- As a link -->
+    <nav class="navbar navbar-light bg-primary">
+       <a class="navbar-brand" href="cliente.html">Clientes <i class="fas fa-users"></i></a>
+    </nav>
+    <!-- As a link -->
+    <nav class="navbar navbar-light bg-primary">
+       <a class="navbar-brand" href="#">Vendas <i class="fas fa-shopping-cart"></i></a>
+    </nav>
+    <!-- As a link -->
+    <nav class="navbar navbar-light bg-primary">
+       <a class="navbar-brand" href="loginAdmin.html">Admin <i class="fas fa-user-tie"></i></a>
+    </nav>
      
-     <div class="table-responsive container col-md-offset-3 ">
+     <div class="table-responsive container table ">
 	 <br>
-	 <h1 class="text-black container col-md-offset-3 titulo">Lista de Produtos</h1>
+	 <h1 class="text-black">Lista de Produtos</h1>
 	 <br>
-	 
-	 <input type="button" id="botaoAdmin" name="botaoAdmin" class="btn btn-dark"
-     value="Administrador" onclick="javascript:location.href='loginAdmin.html'">
-     
-     <input type="button" id="botaoVendas" name="botaoVendas" class="btn btn-light"
+	
+	<input type="button" id="botaoVendas" name="botaoVendas" class="btn btn-light"
      value="Efetuar Venda" onclick="javascript:location.href='venda.html'">
 
-     <input type="button" id="botaoCliente" name="botaoCliente" class="btn btn-info" value="Clientes" onclick="javascript:location.href='cliente.html'">     	
      <input type="button" id="botaoAdicionar" name="botaoAdicionar" class="btn btn-primary" value="Adicionar Produto" onclick="javascript:location.href='frmInserirProduto.html'">
      
      <input type="button" id="botaoLogout" name="botaoLogout" class="btn btn-danger" value="Logout" onclick="javascript:location.href='logout.php'">
@@ -57,21 +75,20 @@
      <div class="table-responsive">
 	 <table class="table table-striped">
 		<tr>
-		 <th class="text-center col-sm-1" >ID</th>
+		 <th class="col-md-1 text-center" >ID</th>
 		 <th class=" col-md-2" >Descrição</th>
 		 <th class=" col-md-1" >Valor</th>
 		 <th class=" col-md-1">Quantidade</th>
 		 <th class=" col-md-1">Altura</th>
 		 <th class=" col-md-1">Largura</th>
-		 <th class=" col-md-1">Observação</th>
+		 <th class=" col-md-1">Obs</th>
 		 <th colspan="2" class="text-center col-md-1">Operações</th>
 		 
 		</tr>
 		<?php while ($linha = mysql_fetch_array($rs)) {?>
 			<tr>
-				<td><?php echo $linha ['id']?></td>
+				<td class="text-center"><?php echo $linha ['id']?></td>
 				<td><?php echo $linha ['descricao']?></td>
-				
 				<td><?php echo number_format($linha['valor'],2,',','.') ?></td>
 				<td><?php echo $linha ['quantidade']?></td>
 				<td><?php echo number_format($linha['altura'],2,',','.') ?></td>

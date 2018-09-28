@@ -23,7 +23,7 @@
     	session_start();
 
     	$_SESSION['user'] = $user;
-    	header("location:listarProdutos.php");
+    	header("location:home.html");
         
 
     }

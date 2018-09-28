@@ -1,0 +1,43 @@
+.navbar {
+    width:140px;
+    height:165px;
+    margin-top:-30px;
+    margin-left: -5px;
+    position:relative;
+    /*background-color: rgb(51, 51, 51);*/
+    border-radius: 15px 15px 15px 15px;
+}
+
+body.corpo{
+	background: #BDBDBD;
+}
+
+div.borboleta{
+	margin-top: -600px;
+	margin-left: 475px;
+}
+
+div.borboletaCliente{
+	margin-top: -650px;
+	margin-left: 475px;
+}
+
+
+div.botoesCliente{
+	margin-top: 100px;
+	margin-left: 650px;
+}
+
+div.nome{
+	margin-top: -40px;
+	margin-left: 510px;
+}
+
+div.table{
+	margin-top: -700px;
+	margin-left: 125px;
+
+}
+
+
+
