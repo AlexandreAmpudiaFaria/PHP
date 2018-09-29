@@ -28,25 +28,37 @@
 	<title >Listagem de Clientes</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-	
-
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="listarProdutos.css">
+    <link rel="stylesheet" type="text/css" href="home.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </head>
-<body id="LoginForm">
+<body class="corpo">
+
+	<!-- navbar -->
+    <nav class="navbar navbar-light bg-primary teste">
+       <a class="navbar-brand" href="home.html">Home <i class="fas fa-home"></i></a>
+    </nav>
+     <nav class="navbar navbar-light bg-primary">
+       <a class="navbar-brand" href="listarProdutos.php">Produtos <i class="fas fa-archive"></i></a>
+      </nav>
+    <nav class="navbar navbar-light bg-primary">
+       <a class="navbar-brand" href="cliente.html">Clientes <i class="fas fa-users"></i></a>
+    </nav>
+    
+    <nav class="navbar navbar-light bg-primary">
+       <a class="navbar-brand" href="#">Vendas <i class="fas fa-shopping-cart"></i></a>
+    </nav>
+    
+    <nav class="navbar navbar-light bg-primary">
+       <a class="navbar-brand" href="loginAdmin.html">Admin <i class="fas fa-user-tie"></i></a>
+    </nav>
      
-     <div class="table-responsive container col-md-9 ">
+     <div class="table-responsive container table ">
 	 <br>
 	 <h1 class="text-black container col-md-5">Lista de Clientes</h1>
 	 <br>
-
-	 <input type="button" id="botaoHome" name="botaoHome" class="btn btn-success"
-          	value="Home" onclick="javascript:location.href='listarProdutos.php'">
-	 
-     <input type="button" id="botaoCliente" name="botaoCliente" class="btn btn-info"
-          	value="Clientes" onclick="javascript:location.href='cliente.html'">     	
 
 	 <input type="button" id="botaoAdicionar" name="botaoAdicionar" class="btn btn-primary"
           	value="Adicionar Cliente" onclick="javascript:location.href='frmInserirCliente.html'">
@@ -60,10 +72,10 @@
      <div class="table-responsive">
 	 <table class="table table-striped">
 		<tr>
-		 <th class="text-center col-sm-1" >ID</th>
+		 <th class=" text-center col-md-1 id" >ID</th>
 		 <th class=" col-md-1" >Nome</th>
 		 <th class=" col-md-1" >Telefone</th>
-		 <th class=" col-md-4">Endereço</th>
+		 <th class=" col-md-2">Endereço</th>
 		 <th class=" col-md-1">Cidade</th>
 		 <th class=" col-md-1">Email</th>
 		 <th class=" col-md-1">Observação</th>

@@ -22,15 +22,25 @@ div.borboletaCliente{
 	margin-left: 475px;
 }
 
+div.borboletaAdmin{
+	margin-top: -700px;
+	margin-left: 475px;
+}
+
 
 div.botoesCliente{
 	margin-top: 100px;
 	margin-left: 650px;
 }
 
+div.botoesAdmin{
+	margin-top: 0px;
+	margin-left: 500px;
+}
+
 div.nome{
 	margin-top: -40px;
-	margin-left: 510px;
+	margin-left: 520px;
 }
 
 div.table{
@@ -38,6 +48,25 @@ div.table{
 	margin-left: 125px;
 
 }
+
+div.corpoInserirCliente{
+	margin-top: -700px;
+	margin-left: 155px;
+
+}
+
+div.corpoInserirProduto{
+	margin-top: -680px;
+	margin-left: 155px;
+
+}
+
+div.corpoInserirUser{
+	margin-top: -680px;
+	margin-left: 155px;
+
+}
+
 
 
 

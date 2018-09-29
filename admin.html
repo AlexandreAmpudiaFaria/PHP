@@ -10,27 +10,50 @@
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="listarProdutos.css">
+    <link rel="stylesheet" type="text/css" href="home.css">
 </head>
-<body id="LoginForm">
-	<div class="container col-md-7">
-		<br><br>
-    <h1 class="titulo ">Área do Administrador</h1>
-    </div>
-    <br><br>
-  <div class="container col-md-6">
-	<input type="button" id="botaoHome" name="botaoHome" class="btn btn-success btn-lg"
-          	value="Home" onclick="javascript:location.href='listarProdutos.php'">
+<body class="corpo">
 
-    <input type="button" id="botaoAdicionar" name="botaoAdicionar" class="btn btn-primary btn-lg"
+  <!-- As a link -->
+    <nav class="navbar navbar-light bg-primary teste">
+       <a class="navbar-brand" href="home.html">Home <i class="fas fa-home"></i></a>
+     </nav>
+
+    <!-- As a link -->
+    <nav class="navbar navbar-light bg-primary">
+       <a class="navbar-brand" href="listarProdutos.php">Produtos <i class="fas fa-archive"></i></a>
+    </nav>
+    <!-- As a link -->
+    <nav class="navbar navbar-light bg-primary">
+       <a class="navbar-brand" href="cliente.html">Clientes <i class="fas fa-users"></i></a>
+    </nav>
+    <!-- As a link -->
+    <nav class="navbar navbar-light bg-primary">
+       <a class="navbar-brand" href="#">Vendas <i class="fas fa-shopping-cart"></i></a>
+    </nav>
+    
+    <nav class="navbar navbar-light bg-primary">
+       <a class="navbar-brand" href="loginAdmin.html">Admin <i class="fas fa-user-tie"></i></a>
+    </nav>
+
+    <div class="borboletaAdmin">
+      <img src="imgs/logo-borboleta-png.png">
+      
+    </div>
+    <div class="nome">
+      <p><h1>Agro Industria Butterfly</h1></p>
+      <p><h1>Área do Administrador</h1></p>
+    </div>
+    
+  <div class="botoesAdmin">
+	<input type="button" id="botaoAdicionar" name="botaoAdicionar" class="btn btn-primary btn-lg"
           	value="Adicionar Usuario" onclick="javascript:location.href='frmCadastrarUsuario.html'">
-     <input type="button" id="botaoLogout" name="botaoLogout" class="btn btn-danger btn-lg"
-          	value="Logout" onclick="javascript:location.href='logout.php'">
+     
      <input type="button" id="botaoListarUser" name="botaoListarUser" class="btn btn-dark btn-lg"
           	value="Listar Usuarios" onclick="javascript:location.href='listarUsuarios.php'">
-  </div>
-	
-  <br><br><br><br><br><br><br><br><br><br><br><br>
 
+      <input type="button" id="botaoLogout" name="botaoLogout" class="btn btn-danger btn-lg"
+            value="Logout" onclick="javascript:location.href='logout.php'">
+  </div>
 </body>
 </html>
