@@ -61,6 +61,30 @@ div.corpoInserirProduto{
 
 }
 
+div.corpoEditarProduto{
+	margin-top: -680px;
+	margin-left: 155px;
+
+}
+
+div.corpoEditarCliente{
+	margin-top: -680px;
+	margin-left: 155px;
+
+}
+
+div.corpoRemoverCliente{
+	margin-top: -680px;
+	margin-left: 155px;
+
+}
+
+div.corpoRemoverProduto{
+	margin-top: -680px;
+	margin-left: 155px;
+
+}
+
 div.corpoInserirUser{
 	margin-top: -680px;
 	margin-left: 155px;

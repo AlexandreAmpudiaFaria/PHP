@@ -31,12 +31,33 @@
     <meta charset="utf-8">
     <title>Editar Produtos</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="editarProduto.css">
+    <link rel="stylesheet" type="text/css" href="estilo.css">
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/validator.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </head>
-<body id="LoginForm">
-    <div class="container col-md-8">
+<body class="corpo" ">
+
+    <!-- navbar -->
+    <nav class="navbar navbar-light bg-primary teste">
+       <a class="navbar-brand" href="home.html">Home <i class="fas fa-home"></i></a>
+    </nav>
+     <nav class="navbar navbar-light bg-primary">
+       <a class="navbar-brand" href="listarProdutos.php">Produtos <i class="fas fa-archive"></i></a>
+      </nav>
+    <nav class="navbar navbar-light bg-primary">
+       <a class="navbar-brand" href="cliente.html">Clientes <i class="fas fa-users"></i></a>
+    </nav>
+    
+    <nav class="navbar navbar-light bg-primary">
+       <a class="navbar-brand" href="#">Vendas <i class="fas fa-shopping-cart"></i></a>
+    </nav>
+    
+    <nav class="navbar navbar-light bg-primary">
+       <a class="navbar-brand" href="loginAdmin.html">Admin <i class="fas fa-user-tie"></i></a>
+    </nav>
+
+    <div class="corpoEditarProduto">
         <br>
         <h1 class="text-black">Editar Produto</h1>
         
