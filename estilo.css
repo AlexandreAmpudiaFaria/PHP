@@ -38,6 +38,11 @@ div.botoesAdmin{
 	margin-left: 500px;
 }
 
+div.btnLogout{
+	margin-top: 0px;
+	margin-left: 500px;
+}
+
 div.nome{
 	margin-top: -40px;
 	margin-left: 520px;
@@ -57,6 +62,12 @@ div.corpoInserirCliente{
 
 div.corpoInserirProduto{
 	margin-top: -680px;
+	margin-left: 155px;
+
+}
+
+div.corpoVenda{
+	margin-top: -670px;
 	margin-left: 155px;
 
 }
@@ -89,6 +100,10 @@ div.corpoInserirUser{
 	margin-top: -680px;
 	margin-left: 155px;
 
+}
+
+input.txtID{
+	width: 220px;
 }
 
 

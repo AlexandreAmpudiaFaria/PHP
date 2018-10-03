@@ -2,9 +2,11 @@
 
   session_start();
   
-  unset($_SESSION['USER']);
-  session_destroy();
+  unset($_SESSION['usuario']);
+  //unset($_SESSION['pwd']);
+  //session_destroy();
   header('location:Index.html');
+ 
 
 
 ?>
