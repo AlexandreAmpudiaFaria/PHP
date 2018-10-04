@@ -22,7 +22,7 @@
     if($pwd==$linha['pwd']){
     	session_start();
 
-    	$_SESSION['user'] = $user;
+    	$_SESSION['usuario'] = $user;
     	header("location:home.html");
         
 

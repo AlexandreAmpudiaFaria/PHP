@@ -1,10 +1,6 @@
 <?php 
 
-    session_start();
-    if(!isset($_SESSION['usuario'])){
-    	Header("Location:Index.html");
-
-    }
+    
 
     $conexao = mysql_connect("localhost","root",""); //abre a conexao com banco
     if(!$conexao){
@@ -75,8 +71,8 @@
      <div class="table-responsive">
 	 <table class="table table-striped">
 		<tr>
-		 <th class="col-md-1 text-center" >ID</th>
-		 <th class=" col-md-2" >Descrição</th>
+		 <th class="col-1 text-center" >ID</th>
+		 <th class=" col-md-1" >Desc</th>
 		 <th class=" col-md-1" >Valor</th>
 		 <th class=" col-md-1">Quantidade</th>
 		 <th class=" col-md-1">Altura</th>
