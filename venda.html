@@ -28,16 +28,18 @@
     </nav>
 	<div class="corpoVenda">
 		<h1>Vendas</h1>
-	<form id="venda.html" name="venda.html" method="POST" action="venda.php">
+	<form id="venda.html" name="venda.html" method="POST" action="carrinho.php">
 	 
-		<label>Descrição:</label>
-		<input type="text" name="txtId" class="form-control txtID" placeholder="Digite o codigo do produto">
+		<label class="form-group" >ID:</label>
+		<input type="text" id="txtid" name="txtid" class="form-group form-control col-md-3"  placeholder="Digite o codigo do produto">
+ 
+    <div class="form-group">
+      <input type="submit" id="botaoEnviar" name="botaoEnviar" class="btn btn-success bt-lg" 
+            value="Buscar">
+    </div>
 
-    
-		
 
-	 
-	</form>
+  </form>
 	</div>
 
 </body>
