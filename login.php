@@ -1,5 +1,9 @@
 <?php 
 
+    $user = trim($_POST['user']);
+    $pwd = trim($_POST['pwd']);
+    $pwd = md5($pwd);
+
     $conexao = mysql_connect("localhost","root",""); //abre a conexao com banco
     if(!$conexao){
     	echo "Erro ao se conectar ao banco";
@@ -12,17 +16,15 @@
     	exit;
     }
  
-    $user = trim($_POST['user']);
-    $pwd = trim($_POST['pwd']);
-    $pwd = md5($pwd);
+    
     
     $rs = mysql_query("SELECT * FROM usuario where user like '$user'"); // rs = record set = conjunto de registros da tabela
     $linha = mysql_fetch_array($rs);
+
     
     if($pwd==$linha['pwd']){
     	session_start();
-
-    	$_SESSION['usuario'] = $user;
+        $_SESSION['usuario'] = $user;
     	header("location:home.html");
         
 
