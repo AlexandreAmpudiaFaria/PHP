@@ -17,6 +17,10 @@
     $rs = mysql_query("SELECT * FROM produto where id=".$id); // rs = record set = conjunto de registros da tabela
     $edita = mysql_fetch_array($rs);
 
+    $rsCli = mysql_query("SELECT * FROM cliente"); // rs = record set = conjunto de registros da tabela
+
+    $linha = mysql_fetch_array($rsCli);
+
 ?>
 
 <!DOCTYPE html>
@@ -76,6 +80,17 @@
         <div class="form-group">
             <label for="lblQuantidade"> Quantidade de saída :</label>
             <input type="text" id="txtQuantidade" name="txtQuantidade" class="form-control col-md-4" required="">
+        </div>
+
+        <div class="form-group">
+            <label for="lblCliente"> Cliente :</label>
+            <br>
+            <select class="form-control col-md-4" name="lista" id="lista">
+                <option value="<?php echo $linha['id'] ?>" selected> <?php echo $linha['nome'] ?></option>
+                <?php while ($linha = mysql_fetch_array($rsCli)) {?>
+                    <option value="<?php echo $linha['id'] ?>"> <?php echo $linha['nome'] ?></option>
+                <?php } ?>
+            </select>
         </div>
 
         <div>

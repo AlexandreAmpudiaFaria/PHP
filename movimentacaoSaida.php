@@ -19,6 +19,8 @@
     
     $tipo = trim($_POST['tipo']);
     $data = trim($_POST['txtData']);
+
+    $cliente = trim($_POST['lista']);
     
 
     
@@ -27,7 +29,7 @@
          
     $ins = mysql_query($sql); // comando para inserir no banco
 
-    $sqy = "INSERT INTO movimentacoes (tipo, quant, quantAnterior, data) VALUES ('$tipo','$quantSaida','$quantAtual','$data');";
+    $sqy = "INSERT INTO movimentacoes (cliente, tipo, quant, quantAnterior, data) VALUES ('$cliente', '$tipo','$quantSaida','$quantAtual','$data');";
          
     $inss = mysql_query($sqy); // comando para inserir no banco
     
