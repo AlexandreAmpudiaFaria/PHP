@@ -14,7 +14,7 @@
     	exit;
     }
 
-    $rs = mysql_query("SELECT * FROM movimentacoes;"); // rs = record set = conjunto de registros da tabela
+    $rs = mysql_query("SELECT * FROM movimentacoe;"); // rs = record set = conjunto de registros da tabela
 
     
 ?>
@@ -58,37 +58,36 @@
     </nav>
      
      <div class="table-responsive container table ">
+	 <br><br>
+	 <h1 class="text-black container col-md-5">Lista de Movimentaçoes</h1>
 	 <br>
-	 <h1 class="text-black">Lista de Movimentaçoes</h1>
-	 <br>
-	
-	<input type="button" id="botaoVendas" name="botaoVendas" class="btn btn-light"
-     value="Efetuar Venda" onclick="javascript:location.href='venda.html'">
 
      <input type="button" id="botaoAdicionar" name="botaoAdicionar" class="btn btn-primary" value="Adicionar Produto" onclick="javascript:location.href='frmInserirProduto.html'">
      
      <input type="button" id="botaoLogout" name="botaoLogout" class="btn btn-danger" value="Logout" onclick="javascript:location.href='logout.php'">
           	    	    	     	
      <br><br>
-     <div class="table-responsive">
+     <div class="container teste col-md-11">
 	 <table class="table table-striped">
 		<tr>
 		 <th class="col-1 text-center" >ID</th>
-		 <th class="col-2 text-center">Cliente/Fornecedor</th>
 		 <th class=" col-md-2 text-center" >Tipo</th>
+		 <th class=" col-md-2 text-center" >Produto</th>
 		 <th class=" col-md-2 text-center" >Quant</th>
 		 <th class=" col-md-2 text-center">Quant anterior</th>
-		 <th class=" col-md-2 text-center">Data</th>
+		 <th class=" col-md-2 text-center">Quant Final</th>
+		 <th  colspan="4" class=" text-center">Data</th>
 		
 		 
 		</tr>
 		<?php while ($linha = mysql_fetch_array($rs)) {?>
 			<tr>
 				<td class="text-center"><?php echo $linha ['id']?></td>
-				<td class="text-center"><?php echo $linha ['cliente']?></td>
 				<td class="text-center"><?php echo $linha ['tipo']?></td>
+				<td class="text-center"><?php echo $linha ['produto']?></td>
 				<td class="text-center"><?php echo $linha ['quant']?></td>
 				<td class="text-center"><?php echo $linha ['quantAnterior']?></td>
+				<td class="text-center"><?php echo $linha ['quantFinal']?></td>
 				<td class="text-center"><?php echo $linha ['data']?></td>
 				<td>
 				<!--<button class="btn btn-info btn-sm" 

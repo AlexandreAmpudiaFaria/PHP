@@ -16,18 +16,17 @@
     $quantAtual = trim($_POST['quant']);
     $quantNova = trim($_POST['txtQuantidade']);
     $quantidadeFinal = ($quantAtual + $quantNova);
-
     $tipo = trim($_POST['tipo']);
     $data = trim($_POST['txtData']);
-    
+    $prod = trim($_POST['txtProduto']);
 
-    
     
     $sql = "UPDATE produto set quantidade='$quantidadeFinal' where id='$id';";
          
     $ins = mysql_query($sql); // comando para inserir no banco
 
-    $sqy = "INSERT INTO movimentacoes (tipo, quant, quantAnterior, data) VALUES ('$tipo','$quantNova','$quantAtual','$data');";
+
+    $sqy = "INSERT INTO movimentacoe (tipo, produto, quant, quantAnterior, quantFinal, data) VALUES ('$tipo', '$prod', '$quantNova','$quantAtual', '$quantidadeFinal', '$data');";
          
     $inss = mysql_query($sqy); // comando para inserir no banco
     if(!ins){

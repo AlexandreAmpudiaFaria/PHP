@@ -64,7 +64,7 @@
 
         <div class="form-group">
             <label for="lblDescricao" required=""> Descrição: </label>
-            <input type="text" id="txtDescricao" name="txtDescricao" class="form-control col-md-4"
+            <input type="text" id="txtProduto" name="txtProduto" class="form-control col-md-4"
             value="<?php echo $edita['descricao'] ?>" required="">
         </div>
 

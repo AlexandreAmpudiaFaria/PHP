@@ -16,28 +16,21 @@
     $quantAtual = trim($_POST['quant']);
     $quantSaida = trim($_POST['txtQuantidade']);
     $quantidadeFinal = ($quantAtual - $quantSaida);
-    
     $tipo = trim($_POST['tipo']);
     $data = trim($_POST['txtData']);
+    $prod = trim($_POST['txtProduto']);
 
-    $cliente = trim($_POST['lista']);
-    
-
-    
-    
     $sql = "UPDATE produto set quantidade='$quantidadeFinal' where id='$id';";
          
     $ins = mysql_query($sql); // comando para inserir no banco
 
-    $sqy = "INSERT INTO movimentacoes (cliente, tipo, quant, quantAnterior, data) VALUES ('$cliente', '$tipo','$quantSaida','$quantAtual','$data');";
-         
-    $inss = mysql_query($sqy); // comando para inserir no banco
+    if($quantSaida <= $quantAtual){
     
-    if(!ins){
-            echo "Deu erro ao atualizar o produto";
-         }
-    
-    else { echo "campo descricao em branco"; }
+    $sqy = "INSERT INTO movimentacoe (tipo, produto, quant, quantAnterior, quantFinal, data) VALUES ('$tipo', '$prod', '$quantSaida','$quantAtual', '$quantidadeFinal','$data');";
+        $inss = mysql_query($sqy);
+        header("location:listarProdutos.php");
+    } 
 
-    header("location:listarProdutos.php");
+    else { echo "Quantidade não disponivel"; }
+         
 ?>

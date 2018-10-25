@@ -62,27 +62,24 @@
      
      <div class="table-responsive container table ">
 	 <br>
-	 <h1 class="text-black">Lista de Produtos</h1>
+	 <h1 class="text-black container col-md-5">Lista de Produtos</h1>
 	 <br>
-	
-	<input type="button" id="botaoVendas" name="botaoVendas" class="btn btn-light"
-     value="Efetuar Venda" onclick="javascript:location.href='venda.html'">
 
      <input type="button" id="botaoAdicionar" name="botaoAdicionar" class="btn btn-primary" value="Adicionar Produto" onclick="javascript:location.href='frmInserirProduto.html'">
      
      <input type="button" id="botaoLogout" name="botaoLogout" class="btn btn-danger" value="Logout" onclick="javascript:location.href='logout.php'">
           	    	    	     	
      <br><br>
-     <div class="table-responsive">
-	 <table class="table table-striped">
+     <div class="container col-md-11 teste">
+	 <table class="table table-striped ">
 		<tr>
-		 <th class="col-1 text-center" >ID</th>
-		 <th class=" col-md-1" >Desc</th>
-		 <th class=" col-md-1" >Valor</th>
-		 <th class=" col-md-1">Quantidade</th>
-		 <th class=" col-md-1">Altura</th>
-		 <th class=" col-md-1">Largura</th>
-		 <th class=" col-md-1">Obs</th>
+		 <th class="col-md-1 text-center">ID</th>
+		 <th class="col-md-1">Desc</th>
+		 <th class="col-md-1">Valor</th>
+		 <th class="col-md-1">Quantidade</th>
+		 <th class="col-md-1">Altura</th>
+		 <th class="col-md-1">Largura</th>
+		 <th class="col-md-1">Obs</th>
 		 <th colspan="4" class="text-center col-md-1">Operações</th>
 		 
 		</tr>
@@ -121,6 +118,7 @@
 
 			
 	 </table>
+	 </div>
 	 </div>
 	</div>
 
