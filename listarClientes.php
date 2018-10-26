@@ -65,28 +65,28 @@
            	
      <br>
      <br>
-     <div class="table-responsive">
+     <div class="container col-md-11 teste">
 	 <table class="table table-striped">
 		<tr>
 		 <th class=" text-center col-md-1 id" >ID</th>
-		 <th class=" col-md-1" >Nome</th>
-		 <th class=" col-md-1" >Telefone</th>
-		 <th class=" col-md-2">Endereço</th>
-		 <th class=" col-md-1">Cidade</th>
-		 <th class=" col-md-1">Email</th>
-		 <th class=" col-md-1">Observação</th>
+		 <th class=" text-center col-md-1" >Nome</th>
+		 <th class=" text-center col-md-1" >Telefone</th>
+		 <th class=" text-center col-md-2">Endereço</th>
+		 <th class=" text-center col-md-1">Cidade</th>
+		 <th class=" text-center col-md-1">Email</th>
+		 <th class=" text-center col-md-1">Observação</th>
 		 <th colspan="2" class="text-center col-md-1">Operações</th>
 		 
 		</tr>
 		<?php while ($linha = mysql_fetch_array($rs)) {?>
 			<tr>
-				<td><?php echo $linha ['id']?></td>
-				<td><?php echo $linha ['nome']?></td>
-				<td><?php echo $linha ['telefone']?></td>
-				<td><?php echo $linha ['endereco']?></td>
-				<td><?php echo $linha ['cidade']?></td>
-				<td><?php echo $linha ['email']?></td>
-				<td><?php echo $linha ['observacao']?></td>
+				<td class="text-center"><?php echo $linha ['id']?></td>
+				<td class="text-center"><?php echo $linha ['nome']?></td>
+				<td class="text-center"><?php echo $linha ['telefone']?></td>
+				<td class="text-center"><?php echo $linha ['endereco']?></td>
+				<td class="text-center"><?php echo $linha ['cidade']?></td>
+				<td class="text-center"><?php echo $linha ['email']?></td>
+				<td class="text-center"><?php echo $linha ['observacao']?></td>
 				<td>
 					<button class="btn btn-warning btn-sm" 
 					onclick="javascript:location.href='frmEditarCliente.php?id='+
