@@ -1,36 +1,40 @@
-<?php 
+<?php
+    $user = trim($_POST['user']);
+    $pwd = trim($_POST['pwd']); 
+    $md5 = md5($pwd);
+    $tipo = 1;
+    
 
-    $conexao = mysql_connect("localhost","root",""); //abre a conexao com banco
-    if(!$conexao){
-    	echo "Erro ao se conectar ao banco";
-    	exit;
-    }
+    //echo "Usuario: " . $user . "<br/>"; 
+    // echo "Senha: " .  $pwd . "<br/>"; 
+    //echo "MD5('$pwd'): $md5 <br/>"; 
 
-    $banco = mysql_select_db("trabalho"); // seleciona o banco a ser usado
-    if(!$banco){
-    	echo "Erro ao se conectar com o banco trabalho";
-    	exit;
+    $conexao =  mysql_connect("localhost","root",""); 
+    if (!$conexao){
+        echo "Erro ao se conectar MySql <br/>" ; 
+        exit;
     }
  
-    $user = trim($_POST['user']);
-    $pwd = trim($_POST['pwd']);
-    $pwd = md5($pwd);
-    
-    $rs = mysql_query("SELECT * FROM usuario where user like '$user'"); // rs = record set = conjunto de registros da tabela
-    $linha = mysql_fetch_array($rs);
-    
-    if($pwd==$linha['pwd'] && $linha['tipo']==1){
-    	session_start();
-
-    	$_SESSION['user'] = $user;
-    	header("location:admin.html");
-        
-
+    $banco  = mysql_select_db("trabalho");
+    if (!$banco){
+      echo "Erro ao se conectar ao banco estoque...";
+         exit;
     }
-    else { echo "Usuario ou senha incorretos !";
+ 
+    $rs = mysql_query("SELECT * FROM  usuario WHERE user LIKE '$user'");
+    $linha = mysql_fetch_array($rs); 
+    //echo "usuario: " . $linha['user'] . "<br/>";
+    //echo "pwd: " .$linha['pwd'] . "<br/>";
 
-    	   header('location:Index.html');
-    	}
-
+    $pwd = $md5;
+    if ($pwd==$linha['pwd'] && $tipo == $linha['tipo']){
+      //echo "Usuario e senha compativeis";
+      session_start(); 
+      $_SESSION['user'] = $user; 
+      header('location:admin.html');
+    }
+    else { //echo "Usuário e senha inválido";
+           header('location: loginAdmin.html'); 
+         }
 
 ?>

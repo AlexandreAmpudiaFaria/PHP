@@ -18,6 +18,26 @@ div.borboleta{
 	margin-left: 475px;
 }
 
+div.imagem{
+	margin-top: -600px;
+	margin-left: 560px;
+}
+
+div.imagemListar{
+	margin-top: -300px;
+	margin-left: 660px;
+}
+
+div.imagemtxt{
+	margin-top: 20px;
+	margin-left: 600px;
+}
+
+div.imagemtxtListar{
+	margin-top: -50px;
+	margin-left: 700px;
+}
+
 div.borboletaCliente{
 	margin-top: -650px;
 	margin-left: 475px;
@@ -59,7 +79,7 @@ div.teste{
 
 div.table{
 	margin-top: -700px;
-	margin-left: 125px;
+	margin-left: 200px;
 
 }
 

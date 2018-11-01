@@ -1,5 +1,6 @@
 <?php 
 
+    
     $conexao = mysql_connect("localhost","root",""); //abre a conexao com banco
     if(!$conexao){
     	echo "Erro ao se conectar ao banco";

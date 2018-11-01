@@ -53,7 +53,7 @@
      
      <div class="table-responsive container table ">
 	 <br>
-	 <h1 class="text-black ">Lista de Clientes</h1>
+	 <h1 class="text-black container col-md-5">Lista de Clientes</h1>
 	 <br>
 
 	 <input type="button" id="botaoAdicionar" name="botaoAdicionar" class="btn btn-primary"
@@ -65,23 +65,28 @@
            	
      <br>
      <br>
-     <div class="container col-md-2 teste">
+     <div class="container col-md-11 teste">
 	 <table class="table table-striped">
 		<tr>
 		 <th class=" text-center col-md-1 id" >ID</th>
 		 <th class=" text-center col-md-1" >Nome</th>
-		 <th colspan="3" class="text-center col-md-1">Operações</th>
+		 <th class=" text-center col-md-1" >Telefone</th>
+		 <th class=" text-center col-md-2">Endereço</th>
+		 <th class=" text-center col-md-1">Cidade</th>
+		 <th class=" text-center col-md-1">Email</th>
+		 <th class=" text-center col-md-1">Observação</th>
+		 <th colspan="2" class="text-center col-md-1">Operações</th>
 		 
 		</tr>
 		<?php while ($linha = mysql_fetch_array($rs)) {?>
 			<tr>
 				<td class="text-center"><?php echo $linha ['id'] ?></td>
 				<td class="text-center"><?php echo $linha ['nome']?></td>
-				<td>
-					<button class="btn btn-primary btn-sm" 
-					onclick="javascript:location.href='fichaCliente.php?id='+
-					<?php echo $linha['id'] ?>"><i class="fas fa-sign-in-alt"></i></button>
-				</td>
+				<td class="text-center"><?php echo $linha ['telefone']?></td>
+				<td class="text-center"><?php echo $linha ['endereco']?></td>
+				<td class="text-center"><?php echo $linha ['cidade']?></td>
+				<td class="text-center"><?php echo $linha ['email']?></td>
+				<td class="text-center"><?php echo $linha ['observacao']?></td>
 				<td>
 					<button class="btn btn-warning btn-sm" 
 					onclick="javascript:location.href='frmEditarCliente.php?id='+
@@ -97,19 +102,9 @@
 
 			
 	 </table>
-
-	 
+	 <br><br><br><br><br><br><br><br><br><br><br><br>
 	 </div>
-
 	</div>
-
-	<div class="imagemListar">
-            <img src="imgs/logo-borboleta-png.png">
-        </div>
-        <div class="imagemtxtListar">
-            <p><h1>Agro Industria Butterfly</h1></p>
-        </div>
-
 
 </body>
 </html>

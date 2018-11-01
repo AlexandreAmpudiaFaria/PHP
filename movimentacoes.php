@@ -88,7 +88,7 @@
 				<td class="text-center"><?php echo $linha ['quant']?></td>
 				<td class="text-center"><?php echo $linha ['quantAnterior']?></td>
 				<td class="text-center"><?php echo $linha ['quantFinal']?></td>
-				<td class="text-center"><?php echo $linha ['data']?></td>
+				<td class="text-center"><?php echo ($linha['data'])?></td>
 				<td>
 				<!--<button class="btn btn-info btn-sm" 
 					onclick="javascript:location.href='frmMovimentacao.php?id='+
