@@ -102,8 +102,25 @@
             value="Limpar">
             <input type="button" id="botaoCancelar" name="botaoCancelar" class="btn btn-danger bt-lg"
             value="Voltar" onclick="javascript:location.href='listarClientes.php'">
+            <input type="button" id="botaoHistorico" name="botaoHistorico" class="btn btn-info bt-lg"
+            value="Historico" onclick="javascript:location.href='historico.php'">
+  
           </div>
             
+        </form>
+
+        <form id="frmFichaCliente" name="frmFichaCliente" method="POST" 
+        action="historico.php">
+        <div>
+            <input type="button" id="botaoHistorico" name="botaoHistorico" class="btn btn-info bt-lg"
+            value="Historico" onclick="javascript:location.href='historico.php'">
+            <label for="lbltxtId"> ID: <?php echo $edita['id'] ?></label>
+            <input type="hidden" name="id" value="<?php echo $edita['id'] ?>">
+            
+            
+        </div>
+            
+
         </form>
 
         <div class="imagem">

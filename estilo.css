@@ -12,6 +12,15 @@ body.corpo{
 	background: #BDBDBD;
 }
 
+body.erro{
+	background: #FE2E2E;
+}
+
+div.erro{
+	margin-top: 200px;
+	margin-left: 420px;
+}
+
 
 div.borboleta{
 	margin-top: -600px;
@@ -79,7 +88,7 @@ div.teste{
 
 div.table{
 	margin-top: -700px;
-	margin-left: 200px;
+	margin-left: 125px;
 
 }
 

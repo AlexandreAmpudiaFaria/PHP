@@ -21,6 +21,10 @@
     $data = trim($_POST['txtData']);
     $prod = trim($_POST['txtProduto']);
 
+    if($quantSaida > $quantAtual){
+         header("location:erro.html");
+    } else {
+
     $sql = "UPDATE produto set quantidade='$quantidadeFinal' where id='$id';";
          
     $ins = mysql_query($sql); // comando para inserir no banco
@@ -32,6 +36,6 @@
         header("location:listarProdutos.php");
     } 
 
-    else { echo "Quantidade não disponivel"; }
+    }
          
 ?>

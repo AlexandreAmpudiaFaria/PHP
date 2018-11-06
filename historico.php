@@ -18,14 +18,16 @@
     	exit;
     }
 
-    $rs = mysql_query("SELECT * FROM produto;"); // rs = record set = conjunto de registros da tabela
+    $id = trim($_REQUEST['id']);
+
+    $rs = mysql_query("SELECT * FROM venda where cliente=".$id); // rs = record set = conjunto de registros da tabela
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
-	<title >Listagem de Produtos</title>
+	<title >Historico de Compras</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 	
@@ -66,7 +68,7 @@
      
      <div class="table-responsive container table ">
 	 <br>
-	 <h1 class="text-black container col-md-5">Lista de Produtos</h1>
+	 <h1 class="text-black container col-md-5">Historico de Compras</h1>
 	 <br>
 
      <input type="button" id="botaoAdicionar" name="botaoAdicionar" class="btn btn-primary" value="Adicionar Produto" onclick="javascript:location.href='frmInserirProduto.html'">
@@ -74,28 +76,20 @@
      <input type="button" id="botaoLogout" name="botaoLogout" class="btn btn-danger" value="Logout" onclick="javascript:location.href='logout.php'">
           	    	    	     	
      <br><br>
-     <div class="container col-md-11 tabelaProdutos">
+     <div class="container col-md-4 teste">
 	 <table class="table table-striped ">
 		<tr>
 		 <th class="col-md-1 text-center">ID</th>
-		 <th class="col-md-1">Desc</th>
-		 <th class="col-md-1">Valor</th>
-		 <th class="col-md-1">Quantidade</th>
-		 <th class="col-md-1">Altura</th>
-		 <th class="col-md-1">Largura</th>
-		 <th class="col-md-1">Obs</th>
+		 <th class="col-md-1">Cliente</th>
+		 <th class="col-md-1">Data</th>
 		 <th colspan="4" class="text-center col-md-1">Operações</th>
 		 
 		</tr>
-		<?php while ($linha = mysql_fetch_array($rs)) {?>
+		<? php while ($linha = mysql_fetch_array($rs)) {?>
 			<tr>
 				<td class="text-center"><?php echo $linha ['id']?></td>
-				<td><?php echo $linha ['descricao']?></td>
-				<td><?php echo number_format($linha['valor'],2,',','.') ?></td>
-				<td><?php echo $linha ['quantidade']?></td>
-				<td><?php echo number_format($linha['altura'],2,',','.') ?></td>
-				<td><?php echo number_format($linha['largura'],2,',','.') ?></td>
-				<td><?php echo $linha ['observacao']?></td>
+				<td><?php echo $linha ['cliente']?></td>
+				<td><?php echo $linha ['data']?></td>
 				<td>
 					<button class="btn btn-info btn-sm" 
 					onclick="javascript:location.href='frmMovimentacao.php?id='+
@@ -118,7 +112,7 @@
 				</td>
 
 			</tr>
-		<?php } ?>	
+		<? php } ?>	
 
 			
 	 </table>
